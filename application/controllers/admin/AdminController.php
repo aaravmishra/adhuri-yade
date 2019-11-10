@@ -31,6 +31,11 @@ class AdminController extends CI_Controller {
     }
 	
 
+	public function login(){
+
+		$this->load->view('admin/login');
+	}
+
     public function add_quots(){
 		
    		    $this->form_validation->set_rules('tittle', 'tittle', 'required');
@@ -125,7 +130,7 @@ class AdminController extends CI_Controller {
 		   $data = array('upload_data' => $this->upload->data()); 
 		   $this->load->view('upload_success', $data); 
 		} 
-		$this->load->view('admin/add-image');	
+		$this->load->view('admin/add-image');		
 
 
 	

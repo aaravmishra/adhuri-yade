@@ -51,12 +51,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Welcome';
 $route['admin'] = 'admin/AdminController/index';
+$route['login'] = 'admin/AdminController/login';
 
 $route['add_quots'] = 'admin/AdminController/add_quots';
 $route['view_quots'] = 'admin/AdminController/view_quots';
 $route['delete_quots'] = 'admin/AdminController/delete_quots';
 
 $route['add_images'] = 'admin/AdminController/add_images';
+//---------------------------------users routes-----------------------------------------
+$route['index'] = 'admin/AdminController/add_images';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

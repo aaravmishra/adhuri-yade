@@ -25,16 +25,51 @@ class AdminController extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('admin/index');
-    }
+		public function index()
+		{
+			$this->load->view('admin/login');
+		}
+		public function dashboard()
+		{
+			$this->load->view('admin/index');
+		}
 	
+	public function login() {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
 
-	public function login(){
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|md5');
 
-		$this->load->view('admin/login');
-	}
+        
+
+        if ($this->form_validation->run() === FALSE) {
+		
+			
+			$this->load->view('admin/login');
+
+		}
+		 else {
+            if ($user = $this->AdminModel->is_login($email, $password)) {
+                $this->session->set_userdata('email', $email);
+               
+                $this->session->set_userdata('is_login', true);
+
+                $this->session->set_flashdata('msg_success', 'Login Successful!');
+                  $this->load->view('admin/index');
+            } else {
+
+
+
+                $this->session->set_flashdata('msg_error', 'Login credentials does not match!');
+
+                $this->load->view('admin/login');
+               
+            }
+        }
+    }
+
+	
 
     public function add_quots(){
 		
@@ -94,7 +129,7 @@ class AdminController extends CI_Controller {
 				$tittle=$this->input->post('tittle');
 				$quots=$this->input->post('quots');
 		
-				$data=array(
+				$data=array(		
 				'tittle'=>$tittle,
 					'quots'=>$quots,
 				);
@@ -114,28 +149,28 @@ class AdminController extends CI_Controller {
 
 
 	public function add_images() { 
-		$config['upload_path']   = './uploads/'; 
-		$config['allowed_types'] = 'gif|jpg|png'; 
-		$config['max_size']      = 100; 
-		$config['max_width']     = 1024; 
-		$config['max_height']    = 768;  
-		$this->load->library('upload', $config);
+
+		$this->load->view('admin/add-image'); 
+		// $config['upload_path']   = './uploads/'; 
+		// $config['allowed_types'] = 'gif|jpg|png'; 
+		// $config['max_size']      = 100; 
+		// $config['max_width']     = 1024; 
+		// $config['max_height']    = 768;  
+		// $this->load->library('upload', $config);
 		   
-		if ( ! $this->upload->do_upload('userfile')) {
-		   $error = array('error' => $this->upload->display_errors()); 
-		   $this->load->view('upload_form', $error); 
-		}
+		// if ( ! $this->upload->do_upload('userfile')) {
+		//    $error = array('error' => $this->upload->display_errors()); 
+		//    $this->load->view('upload_form', $error); 
+		// }
 		   
-		else { 
-		   $data = array('upload_data' => $this->upload->data()); 
-		   $this->load->view('upload_success', $data); 
-		} 
-		$this->load->view('admin/add-image');		
+		// else { 
+		//    $data = array('upload_data' => $this->upload->data()); 
+		//    $this->load->view('upload_success', $data); 
+		// } 
+			
 
 
 	
 } 
-
-
 
 }

@@ -99,7 +99,7 @@
     <section class="slider">
         <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="item"> <img data-src="images/slider/slider.jpg" alt="First slide" src="images/slider/1.jpg">
+                <div class="item"> <img data-src="<?php echo base_url();?>assets/users/images/slider/slide2.png" alt="First slide" src="<?php echo site_url();?>assets/users/images/slider/4.png">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Dil Ki Bate juba Taak. </h1>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item"> <img data-src="images/slider/slider.jpg" alt="First slide" src="images/slider/3.png">
+                <div class="item"> <img data-src="<?php echo base_url();?>assets/users/images/slider/slide2.png" alt="First slide"  src="<?php echo base_url();?>assets/users/images/slider/3.png">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Dil Ki Bate juba Taak.</h1>
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item"> <img data-src="images/slider/slider.jpg" alt="First slide" src="images/slider/4.png">
+                <div class="item"> <img data-src="images/slider/slider4.jpg" alt="First slide"  src="<?php echo base_url();?>assets/users/images/slider/2.png">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Dil Ki Bate juba Taak.</h1>
@@ -126,8 +126,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item active"> <img data-src="images/slider/slider1.jpg" alt="Second slide"
-                        src="images/slider/2.png">
+                <div class="item active"> <img data-src="<?php echo base_url();?>assets/users/images/content_images/img3.jpg" alt="Second slide"
+                src="<?php echo base_url();?>assets/users/images/slider/1.jpg">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Dil Ki Bate juba Taak..</h1>

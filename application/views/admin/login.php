@@ -49,14 +49,29 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form method="post" action="<?php echo site_url();?>admin">
+
+                <div class="login-panel panel panel-default">
+               
+                 <?php if($this->session->flashdata('msg_error')) { ?>
+                    <div class="alert alert-danger">
+                         <?php echo $this->session->flashdata('msg_error'); ?>       
+                    </div>
+                <?php } ?>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign In</h3>
+                </div>
+
+                
+                    <form method="post" action="<?php echo site_url();?>login">
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" name="email"  class="form-control" placeholder="Email">
+                            <span class="text-danger"> <?php echo form_error('email');?></span>
                         </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                                <span class="text-danger"> <?php echo form_error('password');?></span>
                         </div>
                                 
                                 <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
@@ -73,6 +88,8 @@
     <script src="<?php echo site_url();?>assets/vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="<?php echo site_url();?>assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    
 
 
 </body>

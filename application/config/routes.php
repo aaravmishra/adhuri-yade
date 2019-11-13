@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Welcome';
 $route['admin'] = 'admin/AdminController/index';
 $route['login'] = 'admin/AdminController/login';
+$route['dashboard'] = 'admin/AdminController/dashboard';
 
 $route['add_quots'] = 'admin/AdminController/add_quots';
 $route['view_quots'] = 'admin/AdminController/view_quots';

@@ -51,10 +51,8 @@ $(document).ready(function() {
 });
 </script> -->
 
-
-
-
 <script>
+    
 function delete_data() {
     const delete_data = "<?php echo site_url();?>admin/AdminController/delete_quots/<?php echo $rows->id;?>";
     swal({
@@ -71,8 +69,7 @@ function delete_data() {
 
         })
 }
-</script>
+    </script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> </script>

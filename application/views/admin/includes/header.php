@@ -35,7 +35,7 @@
 
                             <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                            <a onclick="log_out()" class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
 
@@ -65,7 +65,9 @@
     <script src="<?php echo site_url();?>assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <script src="<?php echo site_url();?>assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
     <script src="<?php echo site_url();?>/assets/drap-drop-plugin/dropzone.js"></script>
-       <script src="<?php echo site_url();?>/assets/drap-drop-plugin/dropzone.js"></script>
+    <script src="<?php echo site_url();?>/assets/drap-drop-plugin/dropzone.js"></script>
+    <script src="<?php echo site_url();?>/assets/js/sweetalert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"> </script>
     <script>
         (function($) {
             "use strict";
@@ -90,3 +92,22 @@
 </html>
 
          
+<script>
+                function log_out() {
+                const log_out = "<?php echo site_url();?>admin/AdminController/logout";
+                swal({
+            title: "Are you sure?",
+            text: "you want to logout from admin ",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = log_out;
+            }
+
+        })
+    }
+
+             </script>

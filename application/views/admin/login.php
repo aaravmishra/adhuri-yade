@@ -36,6 +36,13 @@
 </style>
 
 </head>
+    <?php
+
+    if (isset($this->session->userdata['logged_in'])) {
+
+    redirect('dashboard');
+    }
+    ?>
 
 <body class="bg-dark">
 

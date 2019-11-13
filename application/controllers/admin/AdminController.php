@@ -44,17 +44,24 @@ class AdminController extends CI_Controller {
         
 
         if ($this->form_validation->run() === FALSE) {
-		
+			if(isset($this->session->userdata['logged_in'])){
+
+				redirect('dashboard');
+			}else{
 			
 			$this->load->view('admin/login');
-
+              }
 		}
 		 else {
             if ($user = $this->AdminModel->is_login($email, $password)) {
-                $this->session->set_userdata('email', $email);
-               
-                $this->session->set_userdata('is_login', true);
 
+				$session_data = array(
+					'email' => isset($user[2]),
+					);
+
+                $this->session->set_userdata('email', $email);
+				$this->session->set_userdata('logged_in', $session_data);
+                $this->session->set_userdata('is_login', true);
                 $this->session->set_flashdata('msg_success', 'Login Successful!');
                   $this->load->view('admin/index');
             } else {
@@ -69,6 +76,17 @@ class AdminController extends CI_Controller {
         }
     }
 
+	   public function logout(){
+				$session_data =array(
+
+					'email'=>'',
+				);
+
+				$this->session->unset_userdata($session_data);
+				$this->session->sess_destroy();
+				redirect('admin');
+
+	   }
 	
 
     public function add_quots(){

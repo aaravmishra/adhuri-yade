@@ -45,8 +45,9 @@
     ?>
 
 <body class="bg-dark">
-
-
+<!-- <?php
+echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
+?> -->
     <div class="sufee-login d-flex align-content-center flex-wrap">
         <div class="container">
             <div class="login-content"style="border-radius:10px;">

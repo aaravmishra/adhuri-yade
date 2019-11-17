@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class UsersController extends CI_Controller {
 
+	public function __construct()
+    {
+        parent:: __construct();
+    
+        $this->load->model('UserModel');
+    }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,4 +28,10 @@ class UsersController extends CI_Controller {
 	{
 		$this->load->view('users/index');
 	}
+	public function shayari()
+	{
+        $result['data']=$this->UserModel->shayari();
+        $this->load->view('users/shayari', $result);
+	}
+
 }

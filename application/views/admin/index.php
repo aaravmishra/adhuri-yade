@@ -3,8 +3,16 @@
 <?php include 'includes/header.php';?>
         <!-- Header-->
 
-   
+        <?php 
+if (isset($this->session->userdata[''])) {
 
+redirect('login');
+}
+?>
+
+<!-- <?php
+echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
+?> -->
         <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -13,6 +21,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-sm-8">
                 <div class="page-header float-right">
                     <div class="page-title">

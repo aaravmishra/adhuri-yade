@@ -49,18 +49,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+//---------------------------Loading Page-------------------------------------------------------------------
 $route['default_controller'] = 'Welcome';
 $route['admin'] = 'admin/AdminController/index';
 $route['login'] = 'admin/AdminController/login';
 $route['dashboard'] = 'admin/AdminController/dashboard';
-
+//---------------------Add quots---------------------------------------------------------------
 $route['add_quots'] = 'admin/AdminController/add_quots';
 $route['view_quots'] = 'admin/AdminController/view_quots';
 $route['delete_quots'] = 'admin/AdminController/delete_quots';
+//------------------------Add poetry--------------------------------------------------------------
+$route['add_poetry'] = 'admin/AdminController/add_poetry';
+$route['view_poetry'] = 'admin/AdminController/view_poetry';
+$route['delete_poetry'] = 'admin/AdminController/delete_poetry';
+//------------------------Add Photos--------------------------------------------------------------
+$route['add_images'] = 'admin/AdminController/image_upload';
+$route['view_images'] = 'admin/AdminController/view_image';
 
-$route['add_images'] = 'admin/AdminController/add_images';
-//---------------------------------users routes-----------------------------------------
-$route['index'] = 'admin/AdminController/add_images';
+//--------------------------------users routes-----------------------------------------------------------------
+$route['shayari'] = 'users/UsersController/shayari';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

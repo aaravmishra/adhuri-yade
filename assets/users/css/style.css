@@ -554,9 +554,10 @@ ul.dropdown-menu>li>a:hover {
     background: url('../images/lines.png') repeat-x left bottom;
 }
 
-.container .row:first-child {
+
+/* .container .row:first-child {
     padding: 45px 10% 50px 10%;
-}
+} */
 
 p.big-paragraph {
     font-size: 18px;

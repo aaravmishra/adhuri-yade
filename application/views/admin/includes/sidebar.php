@@ -57,8 +57,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>poems</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Add poems</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">View Poems</a></li>
+                        <li><i class="fa fa-table"></i><a href="<?php echo site_url();?>add_poetry">Add Poem</a></li>
+                        <li><i class="fa fa-table"></i><a href="<?php echo site_url();?>view_poetry">View Poetry</a></li>
                         </ul>
                     </li>
 
@@ -66,7 +66,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Photos</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="<?php echo site_url();?>add_images">Add Photos</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">View Photos</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="<?php echo site_url();?>view_images">View Photos</a></li>
                         </ul>
                     </li>
 

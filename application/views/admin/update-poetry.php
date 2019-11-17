@@ -11,23 +11,23 @@
 <div class="col-lg-1"></div>
 <div class="col-lg-10">
     <div class="card">
-        <div class="card-header"><strong>Add</strong><small> Quots</small></div>
+        <div class="card-header"><strong>Add</strong><small> Poetry</small></div>
         <div class="card-body card-block">
             <?php 
       foreach($data as $rows)
       {?>
 
-            <form method="post" action="<?php echo site_url();?>admin/AdminController/update_quots">
+            <form method="post" action="<?php echo site_url();?>admin/AdminController/update_poetry">
                 <?php echo validation_errors();?>
                 <div class="form-group"><label for="company" class=" form-control-label">Tittle</label>
                     <input type="text" name="tittle" id="company" placeholder="Tittle" class="form-control"
                         value="<?php echo $rows->tittle;?>">
                 </div>
-                <textarea id="mytextarea" name="quots"> <?php echo $rows->quots;?>
+                <textarea id="mytextarea" name="poetry"> <?php echo $rows->poetry;?>
                         </textarea><br>
                 <input type="hidden" name="hidden_id" value="<?php echo $rows->id;?>">
                 <button type="submit" name="update" class="btn btn-primary" style="margin-left:300px;">Update
-                    Quots</button>
+                    Poetry</button>
             </form>
             <?php  }
           

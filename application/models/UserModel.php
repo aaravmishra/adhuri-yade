@@ -9,6 +9,19 @@ class UserModel extends CI_Model{
         $query= $this->db->get();
         return $query->result(); 
     }
+    public function image(){
+        $this->db->select('*');
+        $this->db->from('photos');
+        $query=$this->db->get();
+        return $query->result();
+    }
+    public function poetry(){
+        $this->db->select('*');
+        $this->db->from('poetry');
+        $query=$this->db->get();
+        return $query->result();
+    
+    }
 
 
 }

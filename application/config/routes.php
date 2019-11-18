@@ -69,6 +69,10 @@ $route['view_images'] = 'admin/AdminController/view_image';
 //--------------------------------users routes-----------------------------------------------------------------
 $route['shayari'] = 'users/UsersController/shayari';
 
+$route['image'] = 'users/UsersController/image';
+
+$route['poetry'] = 'users/UsersController/poetry';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

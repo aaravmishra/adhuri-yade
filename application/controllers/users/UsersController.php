@@ -33,5 +33,17 @@ class UsersController extends CI_Controller {
         $result['data']=$this->UserModel->shayari();
         $this->load->view('users/shayari', $result);
 	}
+	public function image(){
+
+		$result['data']=$this->UserModel->image();
+		$this->load->view('users/image',$result);
+	}
+
+
+	public function poetry(){
+
+		$result['data']=$this->UserModel->poetry();
+		$this->load->view('users/poetry',$result);
+	}
 
 }

@@ -5,7 +5,6 @@ class AdminModel extends CI_Model{
             public function is_login($email, $password)
             {
                 $query = $this->db->get_where('admin', array('email' => $email,'password' => md5($password)));        
-               
                 return $query->row_array();
                
             }

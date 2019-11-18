@@ -55,8 +55,8 @@
                         <li class="dropdown">
                             <div class="dropper"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Poetry</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Sad Poetry</a></li>
-                                    <li><a href="#">Love Poetry</a></li>
+                                    <li><a href="<?php echo base_url();?>poetry">Sad Poetry</a></li>
+                                    <li><a href="<?php echo base_url();?>poetry">Love Poetry</a></li>
 
                                 </ul>
                             </div>
@@ -65,21 +65,21 @@
                             <div class="dropper"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sayari</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="<?php echo base_url();?>shayari">Frienship Shayari</a></li>
-                                    <li><a href="#">Funny Sayari</a></li>
-                                    <li><a href="#"> Dard Sayari</a></li>
-                                    <li><a href="#">Love Sayari</a></li>
-                                    <li><a href="#">Festival Sayari</a></li>
+                                    <li><a href="<?php echo base_url();?>shayari">Funny Sayari</a></li>
+                                    <li><a href="<?php echo base_url();?>shayari"> Dard Sayari</a></li>
+                                    <li><a href="<?php echo base_url();?>shayari">Love Sayari</a></li>
+                                    <li><a href="<?php echo base_url();?>shayari">Festival Sayari</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="dropdown">
                             <div class="dropper"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Images</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Frienship Images</a></li>
-                                    <li><a href="#">Funny Images</a></li>
-                                    <li><a href="#"> Dard Images</a></li>
-                                    <li><a href="#">Love Images</a></li>
-                                    <li><a href="#">Festival Images</a></li>
+                                    <li><a href="<?php echo base_url();?>image">Frienship Images</a></li>
+                                    <li><a href="<?php echo base_url();?>image">Funny Images</a></li>
+                                    <li><a href="<?php echo base_url();?>image"> Dard Images</a></li>
+                                    <li><a href="<?php echo base_url();?>image">Love Images</a></li>
+                                    <li><a href="<?php echo base_url();?>image">Festival Images</a></li>
                                 </ul>
                             </div>
                         </li>

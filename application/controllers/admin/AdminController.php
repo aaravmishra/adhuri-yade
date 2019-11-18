@@ -275,5 +275,11 @@ class AdminController extends CI_Controller
             $result['data']=$this->AdminModel->view_image();
         $this->load->view('admin/view-image', $result);
     }
+    public function delete_image()
+    {
+        $id= $this->uri->segment(4);
+        $this->AdminModel->delete_image('photos', $id);
+        redirect("admin/view-image");
+    }
     
 }
